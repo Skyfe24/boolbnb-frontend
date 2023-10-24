@@ -1,0 +1,123 @@
+@use './partials/mixin';
+@use './partials/vars' as *;
+@use './partials/resets';
+@use './partials/icons';
+@use './partials/searchPage';
+@use './partials/bootstrapCorrection';
+
+// Total
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h5 {
+    font-weight: 600;
+}
+
+strong {
+    color: $darkGray;
+}
+
+// All the <a>
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFBD59;
+}
+
+// All list
+
+
+.card-img-top {
+    height: 110px;
+    width: 150px;
+}
+
+
+@media screen and (max-width: 768px) {
+    #menu {
+        transform: none;
+        opacity: 0;
+        transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+}
+
+.hamburger_li {
+    color: #213644
+}
+
+// Slider
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+// Chrome
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid $logo-color;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background: $logo-color;
+    cursor: pointer;
+    margin-top: -7px;
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+    background: $logo-color;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: $bg-lightgrey;
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:active::-webkit-slider-thumb {
+    background: $logo-color;
+}
+
+/* Firefox */
+input[type=range]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: $logo-color;
+    cursor: pointer;
+}
+
+/* IE */
+input[type=range]::-ms-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: $logo-color;
+    cursor: pointer;
+}
